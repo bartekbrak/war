@@ -9,7 +9,7 @@ Długość: 1 godzina. Głównie rozmowy i małej ilości demonstracji, bez slaj
 
 Przybiorę formę gry z rolami. Załóżmy, że pracujemy razem w normalnym zespole programistycznym gdzie główną technologią jest Python, ja jestem odpowiedzialny za produktywność, a Ty od nie dawna jesteś w zespole. Razem będziemy _dowozić_ nowe funkcje, sprinty, wgrywać kod na serwery produkcyjna, gasić pożary i naprawiać błędy w kodzie. Każdej stronie zależy, żeby nie marnować czasu, żeby było go jak najwięcej na piłkarzyki i myślenie, nie chcemy wykonywac dodatkowej pracy tylko dlatego, że nie znamy krótszej drogi. 
 
-Nic co zaproponuję nie jest prawdą, a jedynie opinią. Moje rekomendacje można obalić, a proponowanej logice zaprzeczyć, ale zgódźmy się co nadrzędnej zasady. *Narzędzia się liczą.* _Tools Matter_. I co do drugiej pomocniczej, nie ma dobrego powodu, żeby znać narzędzie słabo, troszkę i mniej więcej. Spędzimy z nimi tysiące godzin i lata, warto już od samego początku dążyć do aktywnego poznawania ich i mistrzostwa. Tak, mistrzostwa. Wybierz dobre narzędzia i znaj każdą ich moc. Sprawdź to, stań się mistrzem swoich narzędzi, jak się nie opłąci, zwrócę Ci pieniądze. 
+Nic co zaproponuję nie jest prawdą, a jedynie opinią. Moje rekomendacje można obalić, a proponowanej logice zaprzeczyć, ale zgódźmy się co nadrzędnej zasady. **Narzędzia się liczą.** _Tools Matter_. I co do drugiej pomocniczej, nie ma dobrego powodu, żeby znać narzędzie słabo, troszkę i mniej więcej. Spędzimy z nimi tysiące godzin i lata, warto już od samego początku dążyć do aktywnego poznawania ich i mistrzostwa. Tak, mistrzostwa. Wybierz dobre narzędzia i znaj każdą ich moc. Sprawdź to, stań się mistrzem swoich narzędzi, jak się nie opłąci, zwrócę Ci pieniądze. 
 
 Przerywaj mi, sugeruj własne, kontruj, pytaj i męcz. Z chęcią się dowiem czegoś nowego.
 
@@ -168,7 +168,7 @@ na to nie starczy czasu:
 - arrow/moment
 - :| lxml, BeautifulSoup, xmltodict 
 
-## Przykłady narzędzi *w Pythonie*. httpie, ansible, supervisor, mycli, pgcli, docker-compose, [sentry](http://sentry.io), [uWSGI](https://uwsgi-docs.readthedocs.io/)
+## Przykłady narzędzi **w Pythonie**. httpie, ansible, supervisor, mycli, pgcli, docker-compose, [sentry](http://sentry.io), [uWSGI](https://uwsgi-docs.readthedocs.io/)
 
 ## Grube koty
 [NLTK](http://www.nltk.org/), [scipy](http://www.scipy.org/), [scikit-learn](http://scikit-learn.org/)
