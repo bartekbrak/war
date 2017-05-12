@@ -66,7 +66,7 @@ co na początek:
 
 minusy:
 - [abandonware](https://en.wikipedia.org/wiki/Abandonware) [ostatnia wersja "23 September 2016", 4 wersje w 2016]
-- przenoszenie konfiguracji to ból w życi, chyba, że coś się zmieniło
+- przenoszenie konfiguracji to ból w rzyci, chyba, że coś się zmieniło
 
 #### vim
 
