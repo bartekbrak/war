@@ -1,5 +1,8 @@
 # Narzędzia programisty Python
 
+![Logo warsztatów](logo.jpg)
+
+
 Długość: 1 godzina. Głównie rozmowy i małej ilości demonstracji, bez slajdów. Celem jest wymiana doświadczeń i opinii nt. narzędzi, których używaja zawodowi _pythonowcy_.
 
 ## Wstęp. 
