@@ -175,7 +175,7 @@ setup(
 - [freezegun](https://github.com/spulec/freezegun), 
 - BDD/cucumber/gherkin/?
 
-## Standardy kodu. 
+## [Standardy kodu](https://github.com/PyCQA). 
 
 ```
 In [23]: import this
