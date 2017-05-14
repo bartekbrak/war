@@ -70,29 +70,45 @@ minusy:
 
 #### vim
 
+Musisz znać jedno narzędzie, którym sprawnie zedytujesz plik gdzieś gdzie nia ma [_iksów_](https://en.wikipedia.org/wiki/Display_server) i które jest powszechnie dostępne, dlatego chcesz znać vima.   
+
 na początek:
 - :wq, dd, p, P, o, O, A, I, :%s, /cokolwiek, ciw, x, r, dw, d$
 potem vimtutor, i może kolekcjonować pluginy od tych co się znają
 
+Uważaj na ten kiepski "żart":
+```
+$ docker run -it atlassian/ubuntu-minimal bash
+root@471ca357b97a:/# type vi vim
+vi is /usr/bin/vi
+bash: type: vim: not found
+root@471ca357b97a:/# ls -l /usr/bin/vi
+lrwxrwxrwx 1 root root 20 Sep  4  2014 /usr/bin/vi -> /etc/alternatives/vi
+```
+
 #### [Visual Studio Code](http://donjayamanne.github.io/pythonVSCode/)
 
 Rafał mówi, że bardzo dobre.
+
+---
 
 Wszystko inne... no jak kto woli, ale ja bym nie tracił czasu. 
 Nie Atom, NIE gedit, NIE nano, 
 
 Pogadajmy, co kto używa?
 
-## Sysyem operacyjny
+## Hardware
+- dlaczego i7
+- kiedy hardware ma znaczenie i jakie ma znaczenie?
+
+## System operacyjny, System operacyjny jako narzędzie, terminal, bash/zsh
 
 - Linux czy MacOS
 - kiedy da się pracować pod Windowsem
+- dystrubucja... o co ta wojna? centos, arch, debian/ubuntu, gentoo, fedora, puppy
 
-## Hardware
-- dlaczego i7
 
-## System operacyjny jako narzędzie, terminal, bash/zsh
-
+prawdziwy zapis komend z mojej historii, żadna ze mnie wyrocznia, nie ma kanonu komend do poznania ale nie stracisz, jeżeli poznasz właśnie te
 ```
 alias ag apt apt-get apt-file awk arp-scan
 bash bg bzip2 bunzip2
@@ -120,14 +136,78 @@ xargs (wym zargs!)
 
 ## Debuggery, ipdb, pdb, pdbpp?, print('pupa'), śledzenie kodu, logging. 
 
+TODO
+
 ## IPython, REPL na sterydach, Jupyter
+
+demo!
+
+- ?, ??, _, timeit
+- jupyter-qtconsole
+- IPython jako shell
 
 - jest jeszcze [bpython](https://github.com/bpython/bpython)
 
-## Virtualenv, pyenv, venv, docker, site-packages, virtualenvwrapper, instalacja pakietów
+## [Virtualenv](https://virtualenv.pypa.io/en/stable/), [pyenv](https://github.com/pyenv/pyenv), [venv](https://docs.python.org/3/library/venv.html), docker, site-packages, [virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/en/latest/), instalacja pakietów
 
-- najprosztszy setup.py, przejrzyj setup.py na githubie, 
+demo!
+
+- najprosztszy setup.py:
+
+```
+$ cat setup.py
+from setuptools import find_packages, setup
+
+setup(
+    name='kinro',
+    version='0.2',
+    packages=find_packages(),
+)
+```
+
 - setuptools to piekło, [ma "osobnego" BDFLa-delegata](http://python-notes.curiousefficiency.org/en/latest/pep_ideas/core_packaging_api.html)
+- [przejrzyj setup.py na githubie](https://github.com/search?utf8=%E2%9C%93&q=filename%3Asetup.py+language%3Apython&type=Code) 
+
+## testowanie 
+
+- [py.test](https://docs.pytest.org/en/latest/contents.html#), [nosetests](http://nose.readthedocs.io/en/latest/), [unittest](https://docs.python.org/3/library/unittest.html), 
+- [mock](https://docs.python.org/3/library/unittest.mock.html), 
+- [freezegun](https://github.com/spulec/freezegun), 
+- BDD/cucumber/gherkin/?
+
+## Standardy kodu. 
+
+```
+In [23]: import this
+The Zen of Python, by Tim Peters
+
+Beautiful is better than ugly.
+Explicit is better than implicit.
+Simple is better than complex.
+Complex is better than complicated.
+Flat is better than nested.
+Sparse is better than dense.
+Readability counts.
+Special cases aren't special enough to break the rules.
+Although practicality beats purity.
+Errors should never pass silently.
+Unless explicitly silenced.
+In the face of ambiguity, refuse the temptation to guess.
+There should be one-- and preferably only one --obvious way to do it.
+Although that way may not be obvious at first unless you're Dutch.
+Now is better than never.
+Although never is often better than *right* now.
+If the implementation is hard to explain, it's a bad idea.
+If the implementation is easy to explain, it may be a good idea.
+Namespaces are one honking great idea -- let's do more of those!
+```
+
+- [pep8](http://pep8.org/)
+- [pylint](https://www.pylint.org/), [pyflakes](https://github.com/PyCQA/pyflakes), [flake8](http://flake8.pycqa.org/en/latest/), [mccabe](https://github.com/pycqa/mccabe)
+
+---
+
+na to nie starczy czasu:
 
 ## dzwonki i gwizdki, może kiedyś użyjesz
 
@@ -141,39 +221,43 @@ concurrency visualizer
 ## ssh, tunele
 
 ## Alternatywne implementacje Pythona, 
-- pypy, 
-- anaconda, 
+- [pypy](https://pypy.org/), 
+- [anaconda](https://www.continuum.io/downloads), Continuum Analytics! _pay attention!_ 
 - [micropython](https://github.com/micropython/micropython)
 
 cmentarz: ironpython, jython, [CL-Python](https://github.com/metawilm/cl-python), brython, srajton,
 
-## Standardy kodu. 
-
-pep8, pylint, pyflakes, flake8, mccabe
-
-## testowanie 
-- py.test, nosetests, std unittest, 
-- [mock](https://docs.python.org/3/library/unittest.mock.html), 
-- [freezegun](https://github.com/spulec/freezegun), BDD/cucumber/gherkin/?
-
----
-na to nie starczy czasu:
-
 ## moje ulubione biblioteki
-- pygments
-- requests
-- sqlalchemy
-- django
-- cookiecutter
-- arrow/moment
-- :| lxml, BeautifulSoup, xmltodict 
+- [pygments](http://pygments.org/)
+- [Requests: HTTP for Humans](http://docs.python-requests.org/en/master/)
+- [SQLAlchemy](https://www.sqlalchemy.org/)
+- [Django](https://www.djangoproject.com/)
+- [cookiecutter](https://github.com/audreyr/cookiecutter)
+- [arrow](http://arrow.readthedocs.io/en/latest/)/[moment](https://github.com/zachwill/moment)
+- :|, do walki z chaosem [lxml](http://lxml.de/), [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/), [xmltodict](https://github.com/martinblech/xmltodict) 
 
-## Przykłady narzędzi **w Pythonie**. httpie, ansible, supervisor, mycli, pgcli, docker-compose, [sentry](http://sentry.io), [uWSGI](https://uwsgi-docs.readthedocs.io/)
+## Przykłady narzędzi **w Pythonie**. 
+
+- [httpie](https://github.com/jakubroztocil/httpie), 
+- [ansible](https://www.ansible.com/), 
+- [supervisor](http://supervisord.org/), 
+- [mycli](http://mycli.net/), 
+- [pgcli](https://www.pgcli.com/), 
+- [docker-compose](https://docs.docker.com/compose/), 
+- [sentry](http://sentry.io), 
+- [uWSGI](https://uwsgi-docs.readthedocs.io/)
 
 ## Grube koty
-[NLTK](http://www.nltk.org/), [scipy](http://www.scipy.org/), [scikit-learn](http://scikit-learn.org/)
 
-## Kradnięcie Internetu: Scrapy
+- [NLTK](http://www.nltk.org/), 
+- [scipy](http://www.scipy.org/), 
+- [scikit-learn](http://scikit-learn.org/)
 
-## Linki: 
+## Kradnięcie Internetu: 
+
+- [Scrapy](https://scrapy.org/)
+
+## Varia: 
+
 - https://github.com/vinta/awesome-python
+- [ciekawa dyskusja pokazująca _benewolencję_ Guido](https://github.com/PyCQA/pycodestyle/issues/466)
